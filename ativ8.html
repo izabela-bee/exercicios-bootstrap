@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>exercicio 8</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+</head>
+<body>
+    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="width: 25rem; justify-content: center; justify-self: center; margin-top: 10%;">
+        <button id="botao" class="btn btn-primary" style="width: 18rem; margin: 15px;" onclick="ativar()">Abrir Modal</button>
+        <div id="modal" class=".modal" style="margin-bottom: 15px; margin-left: 25px; display: none;">
+                <h5 class="card-title d-inline-block mb-2 text-primary-emphasis">INFORMAÇÕES</h5>
+                <p>Esse site é apenas um teste com fins educacionais!</p>
+        </div>
+    </div>
+
+    <script>
+        function ativar(){
+        let infos = document.getElementById("modal");
+        let botao = document.getElementById("botao");
+        if(botao.innerHTML === "Fechar Modal"){
+            botao.innerHTML = "Abrir Modal";
+            infos.style.display = 'none';
+        }
+        else{
+            infos.style.display = 'inline';
+            botao.innerHTML = "Fechar Modal";
+        }
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
